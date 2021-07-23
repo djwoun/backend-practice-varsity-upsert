@@ -8,11 +8,11 @@ const router = express.Router();
 router.get("/", function (req, res, next) {
   User.find()
     .then((user) => {
-      // res.status(200);
+      res.status(200);
       res.send(user);
     })
     .catch((err) => {
-      //res.status(400);
+      res.status(400);
       console.log(err);
     });
   /* your code here */
@@ -37,9 +37,6 @@ router.post("/", function (req, res, next) {
 
 /* 3. PATCH an existing user by adding a new favorite meal to their list of favorites */
 router.patch("/", function (req, res, next) {
-
-
-  
   /* your code here */
 });
 
